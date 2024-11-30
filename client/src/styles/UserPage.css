@@ -1,0 +1,128 @@
+.search-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  padding: 4rem;
+  background: linear-gradient(to right, #d4fc78, #99e5a2);
+  color: #333;
+  height: 70vh;
+}
+
+.search-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.search-section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  width: 60%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem; /* Add some space below the search box */
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(to right, #ff416c, #ff4b2b); /* Red gradient */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c); /* Reverse gradient on hover */
+}
+
+
+/* Recipe Cards */
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Increased gap for more spacing */
+  
+  margin-top: 20px;
+}
+
+.recipe-card {
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /*margin: 10px;*/
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.recipe-card p {
+  margin: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 96%;
+  /* Adjust height as needed */
+  background-color: #333;
+  display: flex;
+ 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo h1 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #555;
+  border-radius: 5px;
+}

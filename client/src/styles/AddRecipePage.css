@@ -1,0 +1,115 @@
+/* Main container */
+.add-recipe-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Header styling */
+.add-recipe-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.add-recipe-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Form styling */
+.add-recipe-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input fields */
+.add-recipe-form input,
+.add-recipe-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-recipe-form textarea {
+  resize: none;
+}
+
+.add-recipe-form input:focus,
+.add-recipe-form textarea:focus {
+  border-color: #17a2b8;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(23, 162, 184, 0.5);
+}
+
+/* File input */
+.file-input-container {
+  text-align: left;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #17a2b8;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+/* Button styling */
+.add-recipe-form button {
+  padding: 0.75rem;
+  background: linear-gradient(to right, #17a2b8, #1d976c);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-recipe-form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #1d976c, #17a2b8);
+}
+
+/* Improved spacing between inputs */
+.add-recipe-form textarea:first-child {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-recipe-container {
+    padding: 1.5rem;
+  }
+
+  .add-recipe-container h1 {
+    font-size: 2rem;
+  }
+
+  .add-recipe-description {
+    font-size: 0.9rem;
+  }
+
+  .add-recipe-form button {
+    font-size: 0.9rem;
+  }
+}
