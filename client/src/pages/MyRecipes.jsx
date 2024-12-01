@@ -15,7 +15,7 @@ const MyRecipes = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:7000/api/chef/recipes");
+        const response = await axios.get("https://recipe-manager-v96b.onrender.com/api/chef/recipes");
         setRecipes(response.data.recipes);
       } catch (error) {
         console.error("Error fetching recipes:", error.message);
