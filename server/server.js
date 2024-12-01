@@ -21,7 +21,7 @@ mongoose.connect(process.env.mongoURL).then(()=>{
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Frontend URL
+    origin: "https://recipe-manager-v96b.onrender.com", // Frontend URL
     credentials: true, // Allow credentials (cookies) to be sent
   })
 );
