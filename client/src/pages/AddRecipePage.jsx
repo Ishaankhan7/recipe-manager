@@ -33,7 +33,7 @@ const AddRecipePage = () => {
       formData.append("image", image);
 
       const response = await axios.post(
-        "http://localhost:7000/createRecipe", // Backend API endpoint
+        "https://recipe-manager-v96b.onrender.com/createRecipe", // Backend API endpoint
         formData,
         {
           withCredentials: true, // Send cookies for authentication
