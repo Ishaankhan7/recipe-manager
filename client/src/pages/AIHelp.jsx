@@ -20,7 +20,7 @@ const AIHelp = () => {
 
     try {
       // Backend API URL
-      const url = "http://localhost:7000/api/ai/generateRecipe";
+      const url = "https://recipe-manager-v96b.onrender.com/api/ai/generateRecipe";
 
       // Make the API call
       const res = await axios.post(url, { query });
