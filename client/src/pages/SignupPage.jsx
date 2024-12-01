@@ -28,7 +28,7 @@ const SignupPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:7000/signup", {
+      const response = await axios.post("https://recipe-manager-v96b.onrender.com/signup", {
         Username: username,
         Email: email,
         PhoneNumber: phoneNumber,
