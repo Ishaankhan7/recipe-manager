@@ -1,7 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Initialize the Google Generative AI with your API key
-const genAI = new GoogleGenerativeAI("AIzaSyAx2k4EZWCnArsFAmvpArtjUwajmVdc3DI"); // Replace with your actual API key
+const genAI = new GoogleGenerativeAI(process.env.AI_API_KEY); // Replace with your actual API key
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Function to generate a recipe based on user query
@@ -20,8 +20,6 @@ exports.generateRecipe = async (req, res) => {
     // Get the generated recipe text from the AI response
     const generatedRecipe = result?.response?.text();
 
-    // Log the AI response for debugging
-    console.log("Generated Recipe Response:", generatedRecipe);
 
     // Validate the response
     if (!generatedRecipe || generatedRecipe.trim().length === 0) {

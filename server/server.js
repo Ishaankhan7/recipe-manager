@@ -8,6 +8,9 @@ const genAIRoutes = require("./Routes/genAIRoutes");
 require("./Connection/conn")
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const path = require('path')
+
+const dirname = path.resolve();
 
 
 app.use(
@@ -23,15 +26,16 @@ app.use(bodyParser.json());
 
 app.use(cookieParser())
 
-app.get('/', (req, res) => {
-  res.send('Homepage');
-});
 
 app.use(authRoutes)
 app.use(recipeRoutes)
 app.use("/api/recipes", reviewRoutes); 
 app.use(genAIRoutes);
 
+app.use(express.static(path.join(dirname,"/client/dist")))
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(dirname,"client","dist","index.html"))
+})
 
 app.listen(process.env.PORT, () => {
   console.log('Server started');
