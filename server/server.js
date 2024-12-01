@@ -5,14 +5,13 @@ const authRoutes = require('./Routes/authRoutes');
 const recipeRoutes = require('./Routes/recipeRoutes')
 const reviewRoutes = require("./Routes/reviewRoutes");
 const genAIRoutes = require("./Routes/genAIRoutes");
-require("./Connection/conn")
 const cookieParser = require('cookie-parser');
+const mongoose = require("mongoose")
 const cors = require('cors');
 const path = require('path')
 
 const dirname = path.resolve();
 
-const mongoose = require("mongoose")
 
 mongoose.connect(process.env.mongoURL).then(()=>{
     console.log("Connected to MongoDB")
