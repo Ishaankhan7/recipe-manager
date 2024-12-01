@@ -28,7 +28,7 @@ const MyRecipes = () => {
   // Handle delete
   const handleDelete = async (id) => {
     try {
-      await axios.delete("http://localhost:7000/api/delete", {
+      await axios.delete("https://recipe-manager-v96b.onrender.com/api/delete", {
         data: { recipeId: id }, // Include recipeId in the request body
       });
       setRecipes(recipes.filter((recipe) => recipe._id !== id));
@@ -53,7 +53,7 @@ const MyRecipes = () => {
         steps: selectedRecipe.steps,
       };
       const response = await axios.put(
-        "http://localhost:7000/api/update",
+        "https://recipe-manager-v96b.onrender.com/api/update",
         updatedRecipe
       );
       setRecipes(
