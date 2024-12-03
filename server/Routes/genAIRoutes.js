@@ -4,6 +4,6 @@ const { generateRecipe } = require("../controllers/genAIController");
 const jwtVerify = require("../Middleware/jwtVerify"); // Ensure the user is authenticated
 
 // Route to generate recipe suggestions based on user query
-router.post("/api/ai/generateRecipe", generateRecipe);
+router.post("/api/ai/generateRecipe",jwtVerify ,generateRecipe);
 
 module.exports = router;
